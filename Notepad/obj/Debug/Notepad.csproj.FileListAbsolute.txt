@@ -7,3 +7,4 @@ D:\main\учеба\универ\программирование\3 курс\GitL
 D:\main\учеба\универ\программирование\3 курс\GitLaba2\Notepad\Notepad\obj\Debug\Notepad.csproj.CoreCompileInputs.cache
 D:\main\учеба\универ\программирование\3 курс\GitLaba2\Notepad\Notepad\obj\Debug\Notepad.exe
 D:\main\учеба\универ\программирование\3 курс\GitLaba2\Notepad\Notepad\obj\Debug\Notepad.pdb
+D:\main\учеба\универ\программирование\3 курс\GitLaba2\Notepad\Notepad\obj\Debug\Notepad.Form1.resources
