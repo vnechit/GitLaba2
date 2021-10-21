@@ -29,8 +29,6 @@
         private void InitializeComponent()
         {
             this.AddNote = new System.Windows.Forms.Button();
-            this.label1 = new System.Windows.Forms.Label();
-            this.IDBox = new System.Windows.Forms.TextBox();
             this.NoteName = new System.Windows.Forms.Label();
             this.NoteNameBox = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
@@ -49,26 +47,10 @@
             this.AddNote.UseVisualStyleBackColor = true;
             this.AddNote.Click += new System.EventHandler(this.AddNote_Click);
             // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(38, 53);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(26, 20);
-            this.label1.TabIndex = 1;
-            this.label1.Text = "ID";
-            // 
-            // IDBox
-            // 
-            this.IDBox.Location = new System.Drawing.Point(79, 50);
-            this.IDBox.Name = "IDBox";
-            this.IDBox.Size = new System.Drawing.Size(100, 26);
-            this.IDBox.TabIndex = 2;
-            // 
             // NoteName
             // 
             this.NoteName.AutoSize = true;
-            this.NoteName.Location = new System.Drawing.Point(234, 53);
+            this.NoteName.Location = new System.Drawing.Point(67, 56);
             this.NoteName.Name = "NoteName";
             this.NoteName.Size = new System.Drawing.Size(150, 20);
             this.NoteName.TabIndex = 3;
@@ -76,7 +58,7 @@
             // 
             // NoteNameBox
             // 
-            this.NoteNameBox.Location = new System.Drawing.Point(410, 50);
+            this.NoteNameBox.Location = new System.Drawing.Point(294, 53);
             this.NoteNameBox.Name = "NoteNameBox";
             this.NoteNameBox.Size = new System.Drawing.Size(231, 26);
             this.NoteNameBox.TabIndex = 4;
@@ -84,7 +66,7 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(700, 53);
+            this.label2.Location = new System.Drawing.Point(632, 56);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(62, 20);
             this.label2.TabIndex = 5;
@@ -92,7 +74,7 @@
             // 
             // StatusBox
             // 
-            this.StatusBox.Location = new System.Drawing.Point(808, 46);
+            this.StatusBox.Location = new System.Drawing.Point(777, 53);
             this.StatusBox.Name = "StatusBox";
             this.StatusBox.Size = new System.Drawing.Size(208, 26);
             this.StatusBox.TabIndex = 6;
@@ -125,8 +107,6 @@
             this.Controls.Add(this.label2);
             this.Controls.Add(this.NoteNameBox);
             this.Controls.Add(this.NoteName);
-            this.Controls.Add(this.IDBox);
-            this.Controls.Add(this.label1);
             this.Controls.Add(this.AddNote);
             this.Name = "AddWindow";
             this.Text = "AddWindow";
@@ -138,8 +118,6 @@
         #endregion
 
         private System.Windows.Forms.Button AddNote;
-        private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.TextBox IDBox;
         private System.Windows.Forms.Label NoteName;
         private System.Windows.Forms.TextBox NoteNameBox;
         private System.Windows.Forms.Label label2;

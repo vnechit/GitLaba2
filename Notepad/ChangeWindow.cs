@@ -15,6 +15,7 @@ namespace Notepad
         public ChangeWindow()
         {
             InitializeComponent();
+            MessageBox.Show("Для изменения заметки введите её ID или название!");
         }
 
         private void ChangeNote_Click(object sender, EventArgs e)
