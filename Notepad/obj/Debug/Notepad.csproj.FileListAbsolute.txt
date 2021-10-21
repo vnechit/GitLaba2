@@ -1,0 +1,9 @@
+D:\main\учеба\универ\программирование\3 курс\GitLaba2\Notepad\Notepad\bin\Debug\Notepad.exe.config
+D:\main\учеба\универ\программирование\3 курс\GitLaba2\Notepad\Notepad\bin\Debug\Notepad.exe
+D:\main\учеба\универ\программирование\3 курс\GitLaba2\Notepad\Notepad\bin\Debug\Notepad.pdb
+D:\main\учеба\универ\программирование\3 курс\GitLaba2\Notepad\Notepad\obj\Debug\Notepad.csprojAssemblyReference.cache
+D:\main\учеба\универ\программирование\3 курс\GitLaba2\Notepad\Notepad\obj\Debug\Notepad.Properties.Resources.resources
+D:\main\учеба\универ\программирование\3 курс\GitLaba2\Notepad\Notepad\obj\Debug\Notepad.csproj.GenerateResource.cache
+D:\main\учеба\универ\программирование\3 курс\GitLaba2\Notepad\Notepad\obj\Debug\Notepad.csproj.CoreCompileInputs.cache
+D:\main\учеба\универ\программирование\3 курс\GitLaba2\Notepad\Notepad\obj\Debug\Notepad.exe
+D:\main\учеба\универ\программирование\3 курс\GitLaba2\Notepad\Notepad\obj\Debug\Notepad.pdb
