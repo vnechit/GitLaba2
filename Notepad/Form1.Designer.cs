@@ -77,7 +77,6 @@
             this.textBox1.Name = "textBox1";
             this.textBox1.Size = new System.Drawing.Size(213, 26);
             this.textBox1.TabIndex = 3;
-            this.textBox1.Text = "Поле для ввода критерия";
             // 
             // Sortbutton
             // 
@@ -93,9 +92,9 @@
             this.label1.AutoSize = true;
             this.label1.Location = new System.Drawing.Point(52, 866);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(141, 20);
+            this.label1.Size = new System.Drawing.Size(184, 20);
             this.label1.TabIndex = 5;
-            this.label1.Text = "Удалить заметку";
+            this.label1.Text = "Удалить заметку по ID";
             // 
             // textBox2
             // 
@@ -103,7 +102,6 @@
             this.textBox2.Name = "textBox2";
             this.textBox2.Size = new System.Drawing.Size(213, 26);
             this.textBox2.TabIndex = 6;
-            this.textBox2.Text = "Удаление по ID";
             // 
             // DeleteButton
             // 
@@ -140,7 +138,6 @@
             this.textBox5.Name = "textBox5";
             this.textBox5.Size = new System.Drawing.Size(213, 26);
             this.textBox5.TabIndex = 14;
-            this.textBox5.Text = "Текст для поиска";
             // 
             // SearchButton
             // 
