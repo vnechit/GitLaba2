@@ -16,5 +16,17 @@ namespace Notepad
         {
             InitializeComponent();
         }
+
+        private void EditButton_Click(object sender, EventArgs e)
+        {
+            ChangeWindow changewindow = new ChangeWindow();
+            changewindow.Show();
+        }
+
+        private void AddButton_Click(object sender, EventArgs e)
+        {
+            AddWindow addwindow = new AddWindow();
+            addwindow.Show();
+        }
     }
 }

@@ -8,3 +8,5 @@ D:\main\учеба\универ\программирование\3 курс\GitL
 D:\main\учеба\универ\программирование\3 курс\GitLaba2\Notepad\Notepad\obj\Debug\Notepad.exe
 D:\main\учеба\универ\программирование\3 курс\GitLaba2\Notepad\Notepad\obj\Debug\Notepad.pdb
 D:\main\учеба\универ\программирование\3 курс\GitLaba2\Notepad\Notepad\obj\Debug\Notepad.Form1.resources
+D:\main\учеба\универ\программирование\3 курс\GitLaba2\Notepad\Notepad\obj\Debug\Notepad.AddWindow.resources
+D:\main\учеба\универ\программирование\3 курс\GitLaba2\Notepad\Notepad\obj\Debug\Notepad.ChangeWindow.resources
