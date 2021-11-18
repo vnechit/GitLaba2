@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.PrintNotes = new System.Windows.Forms.Button();
             this.comboBox1 = new System.Windows.Forms.ComboBox();
             this.textBox1 = new System.Windows.Forms.TextBox();
@@ -41,19 +42,25 @@
             this.SearchButton = new System.Windows.Forms.Button();
             this.label4 = new System.Windows.Forms.Label();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.ID = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.NoteName = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.idDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.titleDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.descriptionDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.statusDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.categoryDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.notesBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.notebookDataSet = new Notepad.NotebookDataSet();
+            this.notesTableAdapter = new Notepad.NotebookDataSetTableAdapters.NotesTableAdapter();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.notesBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.notebookDataSet)).BeginInit();
             this.SuspendLayout();
             // 
             // PrintNotes
             // 
-            this.PrintNotes.Location = new System.Drawing.Point(1185, 108);
+            this.PrintNotes.Location = new System.Drawing.Point(1053, 86);
+            this.PrintNotes.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.PrintNotes.Name = "PrintNotes";
-            this.PrintNotes.Size = new System.Drawing.Size(203, 53);
+            this.PrintNotes.Size = new System.Drawing.Size(180, 42);
             this.PrintNotes.TabIndex = 1;
             this.PrintNotes.Text = "Вывести все заметки";
             this.PrintNotes.UseVisualStyleBackColor = true;
@@ -65,24 +72,27 @@
             "ID",
             "Категория",
             "Статус"});
-            this.comboBox1.Location = new System.Drawing.Point(53, 933);
+            this.comboBox1.Location = new System.Drawing.Point(47, 746);
+            this.comboBox1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(140, 28);
+            this.comboBox1.Size = new System.Drawing.Size(125, 24);
             this.comboBox1.TabIndex = 2;
             this.comboBox1.Text = "Сортировать";
             // 
             // textBox1
             // 
-            this.textBox1.Location = new System.Drawing.Point(258, 935);
+            this.textBox1.Location = new System.Drawing.Point(229, 748);
+            this.textBox1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(213, 26);
+            this.textBox1.Size = new System.Drawing.Size(190, 22);
             this.textBox1.TabIndex = 3;
             // 
             // Sortbutton
             // 
-            this.Sortbutton.Location = new System.Drawing.Point(607, 935);
+            this.Sortbutton.Location = new System.Drawing.Point(540, 748);
+            this.Sortbutton.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Sortbutton.Name = "Sortbutton";
-            this.Sortbutton.Size = new System.Drawing.Size(125, 34);
+            this.Sortbutton.Size = new System.Drawing.Size(111, 27);
             this.Sortbutton.TabIndex = 4;
             this.Sortbutton.Text = "Сортировать";
             this.Sortbutton.UseVisualStyleBackColor = true;
@@ -90,33 +100,36 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(52, 866);
+            this.label1.Location = new System.Drawing.Point(46, 693);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(184, 20);
+            this.label1.Size = new System.Drawing.Size(157, 17);
             this.label1.TabIndex = 5;
             this.label1.Text = "Удалить заметку по ID";
             // 
             // textBox2
             // 
-            this.textBox2.Location = new System.Drawing.Point(258, 863);
+            this.textBox2.Location = new System.Drawing.Point(229, 690);
+            this.textBox2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(213, 26);
+            this.textBox2.Size = new System.Drawing.Size(190, 22);
             this.textBox2.TabIndex = 6;
             // 
             // DeleteButton
             // 
-            this.DeleteButton.Location = new System.Drawing.Point(607, 851);
+            this.DeleteButton.Location = new System.Drawing.Point(540, 681);
+            this.DeleteButton.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.DeleteButton.Name = "DeleteButton";
-            this.DeleteButton.Size = new System.Drawing.Size(125, 35);
+            this.DeleteButton.Size = new System.Drawing.Size(111, 28);
             this.DeleteButton.TabIndex = 7;
             this.DeleteButton.Text = "Удалить";
             this.DeleteButton.UseVisualStyleBackColor = true;
             // 
             // AddButton
             // 
-            this.AddButton.Location = new System.Drawing.Point(1185, 490);
+            this.AddButton.Location = new System.Drawing.Point(1053, 392);
+            this.AddButton.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.AddButton.Name = "AddButton";
-            this.AddButton.Size = new System.Drawing.Size(194, 51);
+            this.AddButton.Size = new System.Drawing.Size(172, 41);
             this.AddButton.TabIndex = 10;
             this.AddButton.Text = "Добавить";
             this.AddButton.UseVisualStyleBackColor = true;
@@ -124,9 +137,10 @@
             // 
             // EditButton
             // 
-            this.EditButton.Location = new System.Drawing.Point(1185, 279);
+            this.EditButton.Location = new System.Drawing.Point(1053, 223);
+            this.EditButton.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.EditButton.Name = "EditButton";
-            this.EditButton.Size = new System.Drawing.Size(194, 51);
+            this.EditButton.Size = new System.Drawing.Size(172, 41);
             this.EditButton.TabIndex = 13;
             this.EditButton.Text = "Изменить";
             this.EditButton.UseVisualStyleBackColor = true;
@@ -134,16 +148,18 @@
             // 
             // textBox5
             // 
-            this.textBox5.Location = new System.Drawing.Point(258, 781);
+            this.textBox5.Location = new System.Drawing.Point(229, 625);
+            this.textBox5.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.textBox5.Name = "textBox5";
-            this.textBox5.Size = new System.Drawing.Size(213, 26);
+            this.textBox5.Size = new System.Drawing.Size(190, 22);
             this.textBox5.TabIndex = 14;
             // 
             // SearchButton
             // 
-            this.SearchButton.Location = new System.Drawing.Point(607, 772);
+            this.SearchButton.Location = new System.Drawing.Point(540, 618);
+            this.SearchButton.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.SearchButton.Name = "SearchButton";
-            this.SearchButton.Size = new System.Drawing.Size(125, 35);
+            this.SearchButton.Size = new System.Drawing.Size(111, 28);
             this.SearchButton.TabIndex = 15;
             this.SearchButton.Text = "Поиск";
             this.SearchButton.UseVisualStyleBackColor = true;
@@ -151,65 +167,90 @@
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(52, 787);
+            this.label4.Location = new System.Drawing.Point(46, 630);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(122, 20);
+            this.label4.Size = new System.Drawing.Size(106, 17);
             this.label4.TabIndex = 16;
             this.label4.Text = "Поиск заметок";
             // 
             // dataGridView1
             // 
+            this.dataGridView1.AutoGenerateColumns = false;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.ID,
-            this.NoteName,
-            this.Column1,
-            this.Column2,
-            this.Column3});
-            this.dataGridView1.Location = new System.Drawing.Point(56, 46);
+            this.idDataGridViewTextBoxColumn,
+            this.titleDataGridViewTextBoxColumn,
+            this.descriptionDataGridViewTextBoxColumn,
+            this.statusDataGridViewTextBoxColumn,
+            this.categoryDataGridViewTextBoxColumn});
+            this.dataGridView1.DataSource = this.notesBindingSource;
+            this.dataGridView1.Location = new System.Drawing.Point(34, 25);
+            this.dataGridView1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.dataGridView1.Name = "dataGridView1";
+            this.dataGridView1.RowHeadersWidth = 51;
             this.dataGridView1.RowTemplate.Height = 28;
-            this.dataGridView1.Size = new System.Drawing.Size(1009, 646);
+            this.dataGridView1.Size = new System.Drawing.Size(904, 517);
             this.dataGridView1.TabIndex = 17;
             // 
-            // ID
+            // idDataGridViewTextBoxColumn
             // 
-            this.ID.Frozen = true;
-            this.ID.HeaderText = "ID";
-            this.ID.Name = "ID";
-            this.ID.ReadOnly = true;
-            this.ID.Width = 30;
+            this.idDataGridViewTextBoxColumn.DataPropertyName = "id";
+            this.idDataGridViewTextBoxColumn.HeaderText = "id";
+            this.idDataGridViewTextBoxColumn.MinimumWidth = 6;
+            this.idDataGridViewTextBoxColumn.Name = "idDataGridViewTextBoxColumn";
+            this.idDataGridViewTextBoxColumn.Width = 125;
             // 
-            // NoteName
+            // titleDataGridViewTextBoxColumn
             // 
-            this.NoteName.FillWeight = 300F;
-            this.NoteName.HeaderText = "Название заметки";
-            this.NoteName.Name = "NoteName";
-            this.NoteName.ReadOnly = true;
-            this.NoteName.Width = 200;
+            this.titleDataGridViewTextBoxColumn.DataPropertyName = "title";
+            this.titleDataGridViewTextBoxColumn.HeaderText = "title";
+            this.titleDataGridViewTextBoxColumn.MinimumWidth = 6;
+            this.titleDataGridViewTextBoxColumn.Name = "titleDataGridViewTextBoxColumn";
+            this.titleDataGridViewTextBoxColumn.Width = 125;
             // 
-            // Column1
+            // descriptionDataGridViewTextBoxColumn
             // 
-            this.Column1.HeaderText = "Описание заметки";
-            this.Column1.Name = "Column1";
-            this.Column1.Width = 200;
+            this.descriptionDataGridViewTextBoxColumn.DataPropertyName = "description";
+            this.descriptionDataGridViewTextBoxColumn.HeaderText = "description";
+            this.descriptionDataGridViewTextBoxColumn.MinimumWidth = 6;
+            this.descriptionDataGridViewTextBoxColumn.Name = "descriptionDataGridViewTextBoxColumn";
+            this.descriptionDataGridViewTextBoxColumn.Width = 125;
             // 
-            // Column2
+            // statusDataGridViewTextBoxColumn
             // 
-            this.Column2.HeaderText = "Статус";
-            this.Column2.Name = "Column2";
+            this.statusDataGridViewTextBoxColumn.DataPropertyName = "status";
+            this.statusDataGridViewTextBoxColumn.HeaderText = "status";
+            this.statusDataGridViewTextBoxColumn.MinimumWidth = 6;
+            this.statusDataGridViewTextBoxColumn.Name = "statusDataGridViewTextBoxColumn";
+            this.statusDataGridViewTextBoxColumn.Width = 125;
             // 
-            // Column3
+            // categoryDataGridViewTextBoxColumn
             // 
-            this.Column3.HeaderText = "Категория";
-            this.Column3.Name = "Column3";
-            this.Column3.ReadOnly = true;
+            this.categoryDataGridViewTextBoxColumn.DataPropertyName = "category";
+            this.categoryDataGridViewTextBoxColumn.HeaderText = "category";
+            this.categoryDataGridViewTextBoxColumn.MinimumWidth = 6;
+            this.categoryDataGridViewTextBoxColumn.Name = "categoryDataGridViewTextBoxColumn";
+            this.categoryDataGridViewTextBoxColumn.Width = 125;
+            // 
+            // notesBindingSource
+            // 
+            this.notesBindingSource.DataMember = "Notes";
+            this.notesBindingSource.DataSource = this.notebookDataSet;
+            // 
+            // notebookDataSet
+            // 
+            this.notebookDataSet.DataSetName = "NotebookDataSet";
+            this.notebookDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // notesTableAdapter
+            // 
+            this.notesTableAdapter.ClearBeforeFill = true;
             // 
             // Form1
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1415, 1024);
+            this.ClientSize = new System.Drawing.Size(1258, 819);
             this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.SearchButton);
@@ -223,9 +264,13 @@
             this.Controls.Add(this.textBox1);
             this.Controls.Add(this.comboBox1);
             this.Controls.Add(this.PrintNotes);
+            this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Name = "Form1";
             this.Text = "Form1";
+            this.Load += new System.EventHandler(this.Form1_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.notesBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.notebookDataSet)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -245,11 +290,14 @@
         private System.Windows.Forms.Button SearchButton;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.DataGridView dataGridView1;
-        private System.Windows.Forms.DataGridViewTextBoxColumn ID;
-        private System.Windows.Forms.DataGridViewTextBoxColumn NoteName;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column1;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column2;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column3;
+        private NotebookDataSet notebookDataSet;
+        private System.Windows.Forms.BindingSource notesBindingSource;
+        private NotebookDataSetTableAdapters.NotesTableAdapter notesTableAdapter;
+        private System.Windows.Forms.DataGridViewTextBoxColumn idDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn titleDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn descriptionDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn statusDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn categoryDataGridViewTextBoxColumn;
     }
 }
 

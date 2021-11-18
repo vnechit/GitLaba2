@@ -10,3 +10,15 @@ D:\main\учеба\универ\программирование\3 курс\GitL
 D:\main\учеба\универ\программирование\3 курс\GitLaba2\Notepad\Notepad\obj\Debug\Notepad.Form1.resources
 D:\main\учеба\универ\программирование\3 курс\GitLaba2\Notepad\Notepad\obj\Debug\Notepad.AddWindow.resources
 D:\main\учеба\универ\программирование\3 курс\GitLaba2\Notepad\Notepad\obj\Debug\Notepad.ChangeWindow.resources
+C:\Users\Anatoliy\Source\Repos\GitLaba2\Notepad\bin\Debug\Notepad.exe.config
+C:\Users\Anatoliy\Source\Repos\GitLaba2\Notepad\bin\Debug\Notepad.exe
+C:\Users\Anatoliy\Source\Repos\GitLaba2\Notepad\bin\Debug\Notepad.pdb
+C:\Users\Anatoliy\Source\Repos\GitLaba2\Notepad\obj\Debug\Notepad.csproj.AssemblyReference.cache
+C:\Users\Anatoliy\Source\Repos\GitLaba2\Notepad\obj\Debug\Notepad.AddWindow.resources
+C:\Users\Anatoliy\Source\Repos\GitLaba2\Notepad\obj\Debug\Notepad.ChangeWindow.resources
+C:\Users\Anatoliy\Source\Repos\GitLaba2\Notepad\obj\Debug\Notepad.Form1.resources
+C:\Users\Anatoliy\Source\Repos\GitLaba2\Notepad\obj\Debug\Notepad.Properties.Resources.resources
+C:\Users\Anatoliy\Source\Repos\GitLaba2\Notepad\obj\Debug\Notepad.csproj.GenerateResource.cache
+C:\Users\Anatoliy\Source\Repos\GitLaba2\Notepad\obj\Debug\Notepad.csproj.CoreCompileInputs.cache
+C:\Users\Anatoliy\Source\Repos\GitLaba2\Notepad\obj\Debug\Notepad.exe
+C:\Users\Anatoliy\Source\Repos\GitLaba2\Notepad\obj\Debug\Notepad.pdb

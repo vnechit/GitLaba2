@@ -28,5 +28,12 @@ namespace Notepad
             AddWindow addwindow = new AddWindow();
             addwindow.Show();
         }
+
+        private void Form1_Load(object sender, EventArgs e)
+        {
+            // TODO: данная строка кода позволяет загрузить данные в таблицу "notebookDataSet.Notes". При необходимости она может быть перемещена или удалена.
+            this.notesTableAdapter.Fill(this.notebookDataSet.Notes);
+
+        }
     }
 }
