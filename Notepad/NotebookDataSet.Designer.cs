@@ -1040,6 +1040,33 @@ namespace Notepad.NotebookDataSetTableAdapters {
                 }
             }
         }
+        public virtual int PickMaxId()
+        {
+            var new_query = new global::System.Data.SqlClient.SqlCommand();
+            new_query.Connection = this.Connection;
+            new_query.CommandText = "SELECT id, title, description, status, category FROM Notes WHERE (id = (SELECT MAX(id) AS maxID FROM Notes AS TempTable))";
+            new_query.CommandType = global::System.Data.CommandType.Text;
+            global::System.Data.ConnectionState previousConnectionState = new_query.Connection.State;
+            if (((new_query.Connection.State & global::System.Data.ConnectionState.Open)
+                        != global::System.Data.ConnectionState.Open))
+            {
+                new_query.Connection.Open();
+            }
+            try
+            {
+                var returnValue = new_query.ExecuteReader();
+                if (returnValue.Read())
+                    return returnValue.GetInt32(0);
+                return 0;
+            }
+            finally
+            {
+                if ((previousConnectionState == global::System.Data.ConnectionState.Closed))
+                {
+                    new_query.Connection.Close();
+                }
+            }
+        }
     }
     
     /// <summary>
