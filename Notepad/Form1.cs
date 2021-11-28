@@ -33,7 +33,6 @@ namespace Notepad
         {
             // TODO: данная строка кода позволяет загрузить данные в таблицу "notebookDataSet.Notes". При необходимости она может быть перемещена или удалена.
             this.notesTableAdapter.Fill(this.notebookDataSet.Notes);
-
         }
     }
 }

@@ -19,8 +19,32 @@ namespace Notepad
 
         private void AddNote_Click(object sender, EventArgs e)
         {
-            //Дописать функциональный код для кнопки
-            this.Close();
+            //Проверяем введённые значения
+            if (ValidateAddForm(sender, e))
+            {
+                //Создаём объект класса таблицы
+                NotebookDataSetTableAdapters.NotesTableAdapter notes = new NotebookDataSetTableAdapters.NotesTableAdapter();
+                //Получаем максимальны id, т.к не существует метода add для TableAdapter, включаещего в себя Autoincrement.
+                var max_id = notes.GetData().Count();
+                //Вставляем новую заметку
+                notes.Insert(max_id, NoteNameBox.Text, textBox1.Text, StatusBox.Text, "money");
+                //Закрываем форму добавления заметки
+                this.Close();
+            }
+        }
+
+        private bool ValidateAddForm(object sender, EventArgs e)
+        {
+            string errors = "";
+            _ = (NoteNameBox.Text == "") ? errors += "Введите название заметки\n" : errors += "";
+            _ = (StatusBox.Text == "") ? errors += "Введите статус заметки\n" : errors += "";
+            _ = (textBox1.Text == "") ? errors += "Введите текст заметки\n" : errors += "";
+            if (errors != "")
+            {
+                MessageBox.Show(errors);
+                return false;
+            }
+            else return true;
         }
     }
 }

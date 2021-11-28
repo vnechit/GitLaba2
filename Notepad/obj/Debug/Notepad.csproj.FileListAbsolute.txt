@@ -22,3 +22,15 @@ C:\Users\Anatoliy\Source\Repos\GitLaba2\Notepad\obj\Debug\Notepad.csproj.Generat
 C:\Users\Anatoliy\Source\Repos\GitLaba2\Notepad\obj\Debug\Notepad.csproj.CoreCompileInputs.cache
 C:\Users\Anatoliy\Source\Repos\GitLaba2\Notepad\obj\Debug\Notepad.exe
 C:\Users\Anatoliy\Source\Repos\GitLaba2\Notepad\obj\Debug\Notepad.pdb
+C:\Users\e-son\Source\Repos\GitLaba2\Notepad\bin\Debug\Notepad.exe.config
+C:\Users\e-son\Source\Repos\GitLaba2\Notepad\bin\Debug\Notepad.exe
+C:\Users\e-son\Source\Repos\GitLaba2\Notepad\bin\Debug\Notepad.pdb
+C:\Users\e-son\Source\Repos\GitLaba2\Notepad\obj\Debug\Notepad.csproj.AssemblyReference.cache
+C:\Users\e-son\Source\Repos\GitLaba2\Notepad\obj\Debug\Notepad.AddWindow.resources
+C:\Users\e-son\Source\Repos\GitLaba2\Notepad\obj\Debug\Notepad.ChangeWindow.resources
+C:\Users\e-son\Source\Repos\GitLaba2\Notepad\obj\Debug\Notepad.Form1.resources
+C:\Users\e-son\Source\Repos\GitLaba2\Notepad\obj\Debug\Notepad.Properties.Resources.resources
+C:\Users\e-son\Source\Repos\GitLaba2\Notepad\obj\Debug\Notepad.csproj.GenerateResource.cache
+C:\Users\e-son\Source\Repos\GitLaba2\Notepad\obj\Debug\Notepad.csproj.CoreCompileInputs.cache
+C:\Users\e-son\Source\Repos\GitLaba2\Notepad\obj\Debug\Notepad.exe
+C:\Users\e-son\Source\Repos\GitLaba2\Notepad\obj\Debug\Notepad.pdb
