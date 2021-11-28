@@ -37,7 +37,8 @@
               <Mapping SourceColumn="status" DataSetColumn="status" />
               <Mapping SourceColumn="category" DataSetColumn="category" />
             </Mappings>
-            <Sources />
+            <Sources>
+            </Sources>
           </TableAdapter>
         </Tables>
         <Sources />
@@ -47,7 +48,7 @@
   <xs:element name="NotebookDataSet" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="True" msprop:Generator_DataSetName="NotebookDataSet" msprop:Generator_UserDSName="NotebookDataSet">
     <xs:complexType>
       <xs:choice minOccurs="0" maxOccurs="unbounded">
-        <xs:element name="Notes" msprop:Generator_TableClassName="NotesDataTable" msprop:Generator_TableVarName="tableNotes" msprop:Generator_TablePropName="Notes" msprop:Generator_RowDeletingName="NotesRowDeleting" msprop:Generator_RowChangingName="NotesRowChanging" msprop:Generator_RowEvHandlerName="NotesRowChangeEventHandler" msprop:Generator_RowDeletedName="NotesRowDeleted" msprop:Generator_UserTableName="Notes" msprop:Generator_RowChangedName="NotesRowChanged" msprop:Generator_RowEvArgName="NotesRowChangeEvent" msprop:Generator_RowClassName="NotesRow">
+        <xs:element name="Notes" msprop:Generator_TableClassName="NotesDataTable" msprop:Generator_TableVarName="tableNotes" msprop:Generator_RowChangedName="NotesRowChanged" msprop:Generator_TablePropName="Notes" msprop:Generator_RowDeletingName="NotesRowDeleting" msprop:Generator_RowChangingName="NotesRowChanging" msprop:Generator_RowEvHandlerName="NotesRowChangeEventHandler" msprop:Generator_RowDeletedName="NotesRowDeleted" msprop:Generator_RowClassName="NotesRow" msprop:Generator_UserTableName="Notes" msprop:Generator_RowEvArgName="NotesRowChangeEvent">
           <xs:complexType>
             <xs:sequence>
               <xs:element name="id" msprop:Generator_ColumnVarNameInTable="columnid" msprop:Generator_ColumnPropNameInRow="id" msprop:Generator_ColumnPropNameInTable="idColumn" msprop:Generator_UserColumnName="id" type="xs:int" />

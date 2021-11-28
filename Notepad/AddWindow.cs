@@ -25,9 +25,9 @@ namespace Notepad
                 //Создаём объект класса таблицы
                 NotebookDataSetTableAdapters.NotesTableAdapter notes = new NotebookDataSetTableAdapters.NotesTableAdapter();
                 //Получаем максимальны id, т.к не существует метода add для TableAdapter, включаещего в себя Autoincrement.
-                var max_id = notes.GetData().Count();
+                //var max_id = notes.SelectMaxId();
                 //Вставляем новую заметку
-                notes.Insert(max_id, NoteNameBox.Text, textBox1.Text, StatusBox.Text, "money");
+                //notes.Insert(max_id, NoteNameBox.Text, textBox1.Text, StatusBox.Text, "money");
                 //Закрываем форму добавления заметки
                 this.Close();
             }

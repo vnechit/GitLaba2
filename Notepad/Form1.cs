@@ -34,5 +34,16 @@ namespace Notepad
             // TODO: данная строка кода позволяет загрузить данные в таблицу "notebookDataSet.Notes". При необходимости она может быть перемещена или удалена.
             this.notesTableAdapter.Fill(this.notebookDataSet.Notes);
         }
+
+        private void PrintNotes_Click(object sender, EventArgs e)
+        {
+            this.notesTableAdapter.Fill(this.notebookDataSet.Notes);
+        }
+
+        private void DeleteButton_Click(object sender, EventArgs e)
+        {
+            NotebookDataSetTableAdapters.NotesTableAdapter notes = new NotebookDataSetTableAdapters.NotesTableAdapter();
+            notesTableAdapter.Delete(Convert.ToInt32(textBox2.Text));
+        }
     }
 }

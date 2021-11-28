@@ -15,13 +15,34 @@ namespace Notepad
         public ChangeWindow()
         {
             InitializeComponent();
-            MessageBox.Show("Для изменения заметки введите её ID или название!");
+            MessageBox.Show("Для изменения заметки введите её ID!");
         }
 
         private void ChangeNote_Click(object sender, EventArgs e)
         {
-            //Дописать функциональный код для кнопки
-            this.Close();
+            if (ValidateUpdateForm(sender, e))
+            {
+                //Создаём объект класса таблицы
+                NotebookDataSetTableAdapters.NotesTableAdapter notes = new NotebookDataSetTableAdapters.NotesTableAdapter();
+                //Уже умный Update
+                notes.Update(Convert.ToInt32(IDBox.Text), NoteNameBox.Text, textBox1.Text, StatusBox.Text, "test");
+                this.Close();
+            }
+        }
+
+        private bool ValidateUpdateForm(object sender, EventArgs e)
+        {
+            string errors = "";
+            _ = (IDBox.Text == "") ? errors += "Введите ID заметки\n" : errors += "";
+            _ = (NoteNameBox.Text == "") ? errors += "Введите название заметки\n" : errors += "";
+            _ = (StatusBox.Text == "") ? errors += "Введите статус заметки\n" : errors += "";
+            _ = (textBox1.Text == "") ? errors += "Введите текст заметки\n" : errors += "";
+            if (errors != "")
+            {
+                MessageBox.Show(errors);
+                return false;
+            }
+            else return true;
         }
     }
 }
