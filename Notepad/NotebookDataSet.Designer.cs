@@ -923,7 +923,8 @@ namespace Notepad.NotebookDataSetTableAdapters {
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Insert, true)]
-        public virtual int Insert(int id, string title, string description, string status, string category) {
+        public virtual int Insert(string title, string description, string status, string category) {
+            int id = PickMaxId() + 1;
             this.Adapter.InsertCommand.Parameters[0].Value = ((int)(id));
             if ((title == null)) {
                 throw new global::System.ArgumentNullException("title");
