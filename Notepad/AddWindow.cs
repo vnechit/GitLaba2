@@ -25,7 +25,7 @@ namespace Notepad
                 //Создаём объект класса таблицы
                 NotebookDataSetTableAdapters.NotesTableAdapter notes = new NotebookDataSetTableAdapters.NotesTableAdapter();
                 //Вставляем новую заметку
-                notes.Insert(NoteNameBox.Text, textBox1.Text, StatusBox.Text, "money");
+                notes.Insert(NoteNameBox.Text, textBox1.Text, StatusBox.Text, CategoryTextBox.Text);
                 //Закрываем форму добавления заметки
                 this.Close();
             }

@@ -25,7 +25,8 @@ namespace Notepad
                 //Создаём объект класса таблицы
                 NotebookDataSetTableAdapters.NotesTableAdapter notes = new NotebookDataSetTableAdapters.NotesTableAdapter();
                 //Уже умный Update
-                notes.Update(Convert.ToInt32(IDBox.Text), NoteNameBox.Text, textBox1.Text, StatusBox.Text, "test");
+                notes.Update(Convert.ToInt32(IDBox.Text), NoteNameBox.Text, textBox1.Text, StatusBox.Text, CategoryTextBox.Text);
+                Form1.ActiveForm.Focus();
                 this.Close();
             }
         }

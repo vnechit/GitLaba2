@@ -31,19 +31,27 @@ namespace Notepad
 
         private void Form1_Load(object sender, EventArgs e)
         {
-            // TODO: данная строка кода позволяет загрузить данные в таблицу "notebookDataSet.Notes". При необходимости она может быть перемещена или удалена.
-            this.notesTableAdapter.Fill(this.notebookDataSet.Notes);
+            fillData();
         }
 
         private void PrintNotes_Click(object sender, EventArgs e)
         {
-            this.notesTableAdapter.Fill(this.notebookDataSet.Notes);
+            fillData();
         }
 
         private void DeleteButton_Click(object sender, EventArgs e)
         {
-            NotebookDataSetTableAdapters.NotesTableAdapter notes = new NotebookDataSetTableAdapters.NotesTableAdapter();
-            notesTableAdapter.Delete(Convert.ToInt32(textBox2.Text));
+            if (textBox2.Text == "")
+                MessageBox.Show("ID пустой");
+            else
+            {
+                NotebookDataSetTableAdapters.NotesTableAdapter notes = new NotebookDataSetTableAdapters.NotesTableAdapter();
+                notesTableAdapter.Delete(Convert.ToInt32(textBox2.Text));
+            }
+        }
+        public void fillData()
+        {
+            this.notesTableAdapter.Fill(this.notebookDataSet.Notes);
         }
     }
 }
