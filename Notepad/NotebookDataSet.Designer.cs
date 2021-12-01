@@ -1078,8 +1078,31 @@ namespace Notepad.NotebookDataSetTableAdapters {
         public virtual List<string[]> FilterBy(string field, string value)
         {
 
-            string query = string.Format("SELECT id, title, description, status, category FROM Notes WHERE {0} like '%{1}%'", field, value);
+            string where = (field == "description") ? string.Format("like '%{0}%'", value) : string.Format("= '{0}'", value);
+            string query = string.Format("SELECT id, title, description, status, category FROM Notes WHERE {0} {1}", field, where);
     
+            SqlCommand command = new SqlCommand(query, Connection);
+            command.Connection.Open();
+            var reader = command.ExecuteReader();
+            List<string[]> data = new List<string[]>();
+            while (reader.Read())
+            {
+                data.Add(new string[5]);
+                for (var i = 0; i < 5; i++)
+                    data[data.Count - 1][i] = reader[i].ToString();
+            }
+            reader.Close();
+
+            command.Connection.Close();
+            return data;
+
+        }
+
+        public virtual List<string[]> Find(string field, string value)
+        {
+
+            string query = string.Format("SELECT id, title, description, status, category FROM Notes WHERE {0} like '%{1}%'", field, value);
+
             SqlCommand command = new SqlCommand(query, Connection);
             command.Connection.Open();
             var reader = command.ExecuteReader();
