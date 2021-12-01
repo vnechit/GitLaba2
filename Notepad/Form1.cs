@@ -53,5 +53,13 @@ namespace Notepad
         {
             this.notesTableAdapter.Fill(this.notebookDataSet.Notes);
         }
+
+        private void Filterbutton_Click(object sender, EventArgs e)
+        {
+            NotebookDataSetTableAdapters.NotesTableAdapter notes = new NotebookDataSetTableAdapters.NotesTableAdapter();
+            var data = notesTableAdapter.FilterBy(comboBox1.SelectedItem.ToString(), textBox1.Text);
+            foreach (string[] s in data)
+                dataGridView2.Rows.Add(s);
+        }
     }
 }
