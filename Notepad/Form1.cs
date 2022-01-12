@@ -31,6 +31,16 @@ namespace Notepad
 
         private void Form1_Load(object sender, EventArgs e)
         {
+            // TODO: This line of code loads data into the 'notebookDataSet1.Categories' table. You can move, or remove it, as needed.
+            //this.categoriesTableAdapter.Fill(this.notebookDataSet1.Categories);
+            // TODO: This line of code loads data into the 'notebookDataSet1.Notes' table. You can move, or remove it, as needed.
+            //this.notesTableAdapter1.Fill(this.notebookDataSet1.Notes);
+            NotebookDataSetTableAdapters.NotesTableAdapter notes = new NotebookDataSetTableAdapters.NotesTableAdapter();
+            List<string> cats1 = notes.listCategories();
+            foreach (var i in cats1)
+            {
+                comboBox2.Items.Add(i);
+            }
             fillData();
         }
 
@@ -51,7 +61,14 @@ namespace Notepad
         }
         public void fillData()
         {
-            this.notesTableAdapter.Fill(this.notebookDataSet.Notes);
+            dataGridView1.Rows.Clear();
+            NotebookDataSetTableAdapters.NotesTableAdapter notes = new NotebookDataSetTableAdapters.NotesTableAdapter();
+
+            List<string[]> cats = notes.generalMotors();
+            foreach (var cat in cats)
+            {
+                dataGridView1.Rows.Add(cat);
+            }
         }
 
         private void Filterbutton_Click(object sender, EventArgs e)
@@ -61,6 +78,22 @@ namespace Notepad
             var data = notesTableAdapter.FilterBy(comboBox1.SelectedItem.ToString(), textBox1.Text);
             foreach (string[] s in data)
                 dataGridView2.Rows.Add(s);
+        }
+
+        private void comboBox2_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if (comboBox2.SelectedItem.ToString() == "Все")
+            {
+                fillData();
+            }
+            else
+            {
+                dataGridView1.Rows.Clear();
+                NotebookDataSetTableAdapters.NotesTableAdapter notes = new NotebookDataSetTableAdapters.NotesTableAdapter();
+                var data = notesTableAdapter.FilterBy("category_id", comboBox2.SelectedItem.ToString());
+                foreach (string[] s in data)
+                    dataGridView1.Rows.Add(s);
+            }
         }
     }
 }

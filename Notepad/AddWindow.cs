@@ -25,7 +25,7 @@ namespace Notepad
                 //Создаём объект класса таблицы
                 NotebookDataSetTableAdapters.NotesTableAdapter notes = new NotebookDataSetTableAdapters.NotesTableAdapter();
                 //Вставляем новую заметку
-                notes.Insert(NoteNameBox.Text, textBox1.Text, StatusBox.Text, CategoryTextBox.Text);
+                notes.Insert(NoteNameBox.Text, textBox1.Text, StatusBox.Text, comboBox1.SelectedItem.ToString());
                 //Закрываем форму добавления заметки
                 this.Close();
             }
@@ -43,6 +43,16 @@ namespace Notepad
                 return false;
             }
             else return true;
+        }
+
+        private void AddWindow_Load(object sender, EventArgs e)
+        {
+            NotebookDataSetTableAdapters.NotesTableAdapter notes = new NotebookDataSetTableAdapters.NotesTableAdapter();
+            List<string> cats = notes.listCategories();
+            foreach(var i in cats)
+            {
+                comboBox1.Items.Add(i);
+            }
         }
     }
 }

@@ -69,6 +69,11 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>NotebookDataSet.xsd</DependentUpon>
     </Compile>
+    <Compile Include="NotebookDataSet1.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>NotebookDataSet1.xsd</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="AddWindow.resx">
@@ -99,6 +104,17 @@
     </None>
     <None Include="NotebookDataSet.xss">
       <DependentUpon>NotebookDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="NotebookDataSet1.xsc">
+      <DependentUpon>NotebookDataSet1.xsd</DependentUpon>
+    </None>
+    <None Include="NotebookDataSet1.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>NotebookDataSet1.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="NotebookDataSet1.xss">
+      <DependentUpon>NotebookDataSet1.xsd</DependentUpon>
     </None>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
